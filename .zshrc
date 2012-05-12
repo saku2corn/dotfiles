@@ -133,11 +133,11 @@ compinit
 # incremental completion
     function () { # precompile
         local A
-        A=~/.auto-fu.zsh
+        A=~/.zsh/auto-fu.zsh
         [[ -e "${A:r}.zwc" ]] && [[ "$A" -ot "${A:r}.zwc" ]] ||
         zsh -c "source $A; auto-fu-zcompile $A ${A:h}" >/dev/null 2>&1
     }
-    source ~/.auto-fu; auto-fu-install
+    source ~/.zsh/auto-fu; auto-fu-install
 
     zstyle ':auto-fu:highlight' input bold
     zstyle ':auto-fu:highlight' completion fg=white,dim
